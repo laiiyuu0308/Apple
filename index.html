@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- 產品要用的link -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'>
+    <!-- 產品要用的link -->
+</head>
+<title>拾月菓</title>
+<style>
+    /* #wrapper {
+        width: 1800px;
+        margin: 0 auto;
+    } */
+
+    /* .marquee {
+        background: #9A2540;
+        color: white;
+    } */
+
+    /* header {
+        border-bottom: #9A2540 solid 2px;
+        position: fixed;
+        width: 980px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        top: 0;
+
+        overflow: hidden;
+        transition: 0.4s;
+        padding: 0px 10px;
+        z-index: 99;
+
+    } */
+
+    .navbar {
+        overflow: hidden;
+        color: #9A2540;
+        /* border-bottom: 2px solid #9A2540; */
+
+    }
+
+    .nav-item {
+        list-style: none;
+        /*將li的樣式取消掉*/
+
+    }
+
+    .nav-item:hover {
+        border-bottom: 2px solid #9A2540;
+    }
+
+    .nav-icon {
+        margin: 40px;
+    }
+
+
+    /* s */
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #fcdde2;
+        color: #9A2540;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+    #myBtn:hover {
+        background-color: #5b1e2c;
+        color: white;
+    }
+
+    /* footer的部分 */
+    footer {
+        justify-content: center;
+        background-color: #9A2540;
+        color: white;
+    }
+
+    .footer-item h4 {
+        border-bottom: 1px solid #df8881;
+        padding-bottom: 20px;
+    }
+
+    .footer-item nav {
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.4;
+    }
+
+    .footer-item nav a {
+        text-decoration: none;
+        color: white;
+        padding: 6px 0;
+
+    }
+
+    .footer-item nav a:hover {
+        background-color: #5b1e2c;
+
+    }
+
+    .footer-subs {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .footer-subs form {
+        display: flex;
+        width: 100%;
+        margin: auto 0px;
+        padding: 6px 0;
+    }
+
+    .footer-subs input[type="text"],
+    .footer-subs input[type="submit"] {
+        border: none;
+        padding: 5px 10px;
+    }
+
+    .footer-subs input[type="text"] {
+        width: 0;
+        flex-grow: 1;
+    }
+
+    .footer-subs input[type="submit"] {
+        color: #9A2540;
+        background-color: #fcdde2;
+    }
+
+    .footer-subs input[type="submit"]:hover {
+        background-color: #5b1e2c;
+        color: white;
+    }
+
+    .conpyright {
+        background-color: #5b1e2c;
+        color: white;
+        text-align: center;
+    }
+
+    /* 主視覺圖main區塊 */
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+
+    .pic {
+        display: flex;
+        width: 1000;
+        height: 700px;
+        margin-left: 90px;
+    }
+
+    .pic2 {
+        display: flex;
+        height: 700px;
+        margin-top: 100px;
+        margin-left: 40px;
+    }
+
+    .mirror {
+        width: 800px;
+        height: 450px;
+        background-color: #fdf0f0;
+        margin: -210px 20px;
+        border-radius: 10%;
+        box-shadow: 10px 20px 20px #fdf0f0;
+        opacity: .6;
+    }
+
+    .circle {
+        border-radius: 50%;
+        /*圓形*/
+        background-color: #df8881;
+        width: 350px;
+        height: 350px;
+        align-items: center;
+        margin: 40px 250px;
+        box-shadow: 10px 20px 90px #df8881;
+
+    }
+
+    .txt {
+        width: 400px;
+        height: 100px;
+        /* background-color: #9A2540; */
+        margin-top: 120px;
+        margin-left: 40px;
+        font-size: 22px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    /* 緩衝區 */
+    .pink {
+        width: 100%;
+        height: 600px;
+        background-color: #fcdde2;
+    }
+
+    /*brand區 */
+    /* 產品區 */
+    @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+    .product{
+        width: 100%;
+        height: 700px;
+        /* background-color: #df8881; */
+    }
+    .swiper {
+        max-width: 50%;
+        overflow: visible;
+        /* position: absolute; */
+        top: 40%;
+        left:25%;
+        transform: translate(-50%, -50%);
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+    }
+
+    .swiper-slide::after {
+        position: absolute;
+        content: "";
+        inset: 0;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background: linear-gradient(to bottom right, #b8b8b88f, #ffffff5e);
+    }
+
+    .swiper-slide-active::after {
+        background: none;
+    }
+
+    .swiper-slide>div {
+        text-align: center;
+        display: none;
+        opacity: 0;
+    }
+
+    .swiper-slide-active div {
+        display: block;
+        opacity: 1;
+    }
+
+    .swiper-slide h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: "Libre Baskerville", serif;
+        position: relative;
+        bottom: -20px;
+        /* 新增*/
+    }
+
+    .swiper-slide h2::after {
+        position: absolute;
+        content: "";
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        /* background: linear-gradient(#e66465, #9198e5); */
+        background: linear-gradient(#e66465, #f19ecc);
+    }
+
+    @keyframes line {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    .swiper-slide-active h2::after {
+        animation: line 0.5s linear forwards;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        box-shadow: 0px 3px 17px rgb(0 0 0 / 25%);
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+    }
+
+    @media (min-width: 768px) {
+        .swiper-slide h2 {
+            font-size: 2rem;
+        }
+    }
+    /* 客製化禮物盒 */
+    .gift img{
+        width: 700px;
+        height: 600px;
+        display: flex;
+        margin: 120px;
+
+        }
+    .btn-gift{
+        color: white;   
+        background-color: #d6728a;
+        /* border-radius: 10%; */
+        width: 150px;
+        height: 50px;
+        
+    }
+</style>
+</head>
+
+<body>
+    <!-- 回到最上方 -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- header只放跑馬燈 -->
+    <!-- <header>
+        <div class=" marquee">
+            <marquee width="80%">客製化禮物盒上線囉</marquee>
+        </div>
+    </header> -->
+    <!-- nav固定在上方 -->
+    <nav>
+
+        <ul class="navbar  ">
+
+            <div class="shoplogo ">
+                <h1><img src="./img/拾月菓logo.png" alt="和菓子LOGO" width="200" height="80"></h1>
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    所有商品<br>
+                    <span>製品リスト</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    客製化禮物盒<br>
+                    <span>カスタマイズされたギフトボックス</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    門市據點<br>
+                    <span>実店舗</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    聯絡我們<br>
+                    <span>連絡方法</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">購物須知<br>
+                    <span>知らせ</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">防詐騙宣導<br>
+                    詐欺防止の宣伝</a>
+            </li>
+
+            <div class="nav-icon">
+                <!-- 登入的icon -->
+                <!-- <i class="bi bi-person-circle"></i> -->
+                <a href="#">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16" color="#9A2540">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                </a>
+                <!-- 購物車的icon -->
+                <!-- <i class="bi bi-bag"></i> -->
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bag"
+                        viewBox="0 0 16 16" color="#9A2540">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+
+                    </svg>
+                </a>
+                <!-- menu的icon -->
+                <!-- <i class="bi bi-list"></i> -->
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16" color="#9A2540">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </a>
+            </div>
+        </ul>
+
+
+
+    </nav>
+
+    <main class="wrap">
+        <div class="main-left-item">
+            <figure class="pic">
+                <img src="./img/main1.jpg" alt="櫻花風景圖1">
+            </figure>
+        </div>
+        <div class="main-center-item">
+
+            <div class="circle">
+                &nbsp;
+            </div>
+            <div class="mirror">
+                &nbsp;
+            </div>
+        </div>
+        <div class="txt">
+            日本文化を継承し、最高級の天然原料を厳選したブランドであることを伝える
+            文化の本質である「不屈、厳格、ひたむき」の精神を貫く
+
+            <div class="main-right-item">
+                <figure class="pic2">
+                    <img src="./img/main2.jpg" alt="櫻花風景圖2">
+                </figure>
+            </div>
+    </main>
+
+
+    <section>
+        <div class="pink">
+            &nbsp;
+        </div>
+    </section>
+
+    <!-- 品牌介紹 -->
+    <section>
+        <div class="brand">
+
+            <figure>
+                <div class="handmade">
+                    <img src="./img/品牌故事圖.png" alt="職人">
+                </div>
+            </figure>
+            <div>
+                <h2>拾月菓</h2>
+                <div>
+                    「大和三月」日式菓子專賣店創辦於令和 3
+                    年以「大和」民族豐厚的文化底蘊與季節更迭中最生氣盎然的「三月」命名傳達品牌承襲日本文化、嚴選天然頂級原料的理念秉持著文化精髓中「不懈不怠、嚴謹專注」的職人精神。
+                </div>
+                <div>
+                    和菓子専門店「やまとマーチ」 令和3年創業
+                    「大和」国家の豊かな文化遺産と、四季の移ろいの中で最も活気に満ちた「三月」にちなんで名付けられました
+                    日本文化を継承し、最高級の天然原料を厳選したブランドであることを伝える
+                    文化の本質である「不屈、厳格、ひたむき」の精神を貫く
+                </div>
+                <button class="btn-brand">品牌介紹</button>
+            </div>
+        </div>
+    </section>
+    <!-- 產品圈圈圖 -->
+    <!-- 產品首頁 Swiper -->
+    <section class="product">
+        
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./procduct/月兔饅頭.png">
+                    <div>
+                        <a href="https://www.w3schools.com/"
+                        class="stretched-link text-decoration-none link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                        <h2>月兔饅頭</h2>
+                    </a>
+                </div>
+            </div>
+            
+            <div class=" swiper-slide">
+                <img src="./procduct/水饅頭.png">
+                <div>
+                    <a href="https://docs.google.com/spreadsheets/d/1tOUhCC1seWgHXOrNiYRxpJwbvnNOvLqRtdtjs3tGNUs/edit#gid=0"
+                    class="stretched-link text-decoration-none link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                    <h2>水饅頭</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="./procduct/風味抹茶1入.png">
+                <div>
+                    <a href="https://corelab.iiiedu.org.tw/"
+                    class="stretched-link text-decoration-none link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                    <h2>銅鑼燒</h2>
+                </a>
+            </div>
+        </div>
+
+            <div class="swiper-slide">
+                <img src="./procduct/大福.png">
+                <div>
+                    <a href="https://www.google.com/search?q=postman&rlz=1C1EJFC_enTW909TW909&oq=&aqs=chrome.6.35i39i362l4j69i59i450l4.175307662j0j15&sourceid=chrome&ie=UTF-8"
+                        class="stretched-link text-decoration-none link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                        <h2>大福</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="./procduct/羊羹.png">
+                <div>
+                    <a href="https://ithelp.ithome.com.tw/articles/10201503"
+                    class="stretched-link text-decoration-none link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                        <h2>羊羹</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <script src='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js'></script>
+    <script>var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: "1",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 4,
+                slideShadows: false
+            },
+            keyboard: {
+                enabled: true
+            },
+            mousewheel: {
+                thresholdDelta: 70
+            },
+            initialSlide: 0,
+            on: {
+                click(event) {
+                    swiper.slideTo(this.clickedIndex);
+                }
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2
+                }
+            }
+        });
+        </script>
+
+
+<section>
+    <div class="gift">
+        <figure>
+            <img src="./img/包裝圖片.png" alt="客製化禮盒">
+        </figure>        
+        <button type="button" class="btn-gift">製作專屬禮盒</button>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <div class="footerlogo">
+        <img src="./img/拾月菓logo.png" alt="" width="200" height="100">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <div class="footer-item">
+                        <h4>品牌故事</h4>
+                        <nav>
+                            <a href="#">品牌介紹</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 ">
+                    <div class="footer-item">
+
+                        <h4>門市據點</h4>
+                        <nav>
+                            <a href="#">地址:宜蘭縣大同區菓子路10巷4號</a>
+                            <a href="#">電話 : 03-2232-1010</a>
+                            <a href="#">Email : octmoon@octmoon.com</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="footer-item">
+
+                        <h4>顧客服務</h4>
+                        <nav>
+                            <a href="#">所有商品</a>
+                            <a href="#">最新消息</a>
+                            <a href="#">購物須知</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="footer-item footer-subs">
+
+                        <h4>訂閱電子報</h4>
+                        <form>
+                            <input type="text" name="">
+                            <input type="submit" value="訂閱">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conpyright">
+            conpyright &copy;2023
+            拾月菓
+        </div>
+    </footer>
+
+    <!-- 回到最上方的jquery -->
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>
