@@ -4,6 +4,7 @@ import './index.css';
 import App from './App'
 import Nav from './nav';
 import './nav.css'
+import Footer from './Footer'
 
 
 
