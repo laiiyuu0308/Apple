@@ -1,0 +1,81 @@
+footer {
+    justify-content: center;
+    background-color: #9A2540;
+    color: white;
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    
+}
+
+.footer-item {
+    text-align: center; /* 文字居中對齊 */
+    padding: 20px; /* 添加垂直間距 */
+    flex-direction: row;
+}
+
+.footer-item h4 {
+    border-bottom: 1px solid #df8881;
+    padding-bottom: 20px;
+    margin: 0; /* 移除頂部和底部間距 */
+}
+
+.footer-item nav {
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row; 
+    flex-direction: column;
+    justify-content: center; /*水平居中對齊*/
+}
+
+.footer-item nav a {
+    text-decoration: none;
+    color: white;
+    padding: 6px 12px; /*添加水平間距*/
+    margin: 0 10px; /* 添加左右間距 */
+}
+
+.footer-item nav a:hover {
+    background-color: #5b1e2c;
+}
+
+.footer-subs {
+    display: flex;
+    flex-direction: column; /* 水平排列 */
+    justify-content: center; /* 水平居中對齊 */
+    align-items: center; /* 垂直居中對齊 */
+    margin-top: 20px; /* 添加頂部間距 */
+}
+
+.footer-subs form {
+    display: flex;
+    width: 100%;
+    padding: 6px 0;
+}
+
+.footer-subs input[type="text"],
+.footer-subs input[type="submit"] {
+    border: none;
+    padding: 5px 10px;
+}
+
+.footer-subs input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px; /* 添加右間距 */
+}
+
+.footer-subs input[type="submit"] {
+    color: #9A2540;
+    background-color: #fcdde2;
+}
+
+.footer-subs input[type="submit"]:hover {
+    background-color: #5b1e2c;
+    color: white;
+}
+
+.conpyright {
+    background-color: #5b1e2c;
+    color: white;
+    text-align: center;
+    padding: 10px; /* 添加內容的間距 */
+}
