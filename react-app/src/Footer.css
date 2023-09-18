@@ -1,26 +1,49 @@
-footer {
+footer{
+    background-color: #9A2540;
+    color: white;
+
+}
+.box{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.footer-item ul{
+    /* margin: 10px 40px; */
+    text-align: left;
+}
+.footer-item ul a{
+    text-decoration:none ;
+    color: inherit; /*字的顏色繼承父層*/
+}
+.footer-item ul h4{
+    border-bottom:2px solid #d7879a ;
+    text-align: center;
+}
+.footer-item li{
+    list-style: none;
+}
+
+.conpyright {
+    background-color: #5b1e2c;
+    color: white;
+    text-align: center;
+}
+
+/* footer {
     justify-content: center;
     background-color: #9A2540;
     color: white;
-    display: flex;
-    align-items: center;
-    /* flex-direction: column; */
-}
-.footer-item{
-    display:flex;
-    flex-direction: row;
+    text-align: center;
 }
 
 .footer-item h4 {
     border-bottom: 1px solid #df8881;
     padding-bottom: 20px;
-    display: flex;
-    
 }
 
-.content {
+.footer-item nav {
     padding: 10px 0px;
-    display: flex;
+  
     flex-direction: column;
     line-height: 1.4;
 }
@@ -62,7 +85,7 @@ footer {
 }
 
 .footer-subs input[type="submit"] {
-    color: #9a2540;
+    color: #9A2540;
     background-color: #fcdde2;
 }
 
@@ -75,4 +98,4 @@ footer {
     background-color: #5b1e2c;
     color: white;
     text-align: center;
-}
+} */
