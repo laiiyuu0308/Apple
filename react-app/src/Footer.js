@@ -1,24 +1,23 @@
 import React from 'react';
 import './Footer.css'
+import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function Footer() {
   return (
     <footer>
-      <div className="footerlogo">
-        <img src="./img/拾月菓logo.png" alt="" width="200" height="100" />
-      </div>
+      
         <div className="container">
-      <div className="box">
+     
           <div className="row">
             <div className="col-md-3 col-sm-12">
               <div className="footer-item">
               <ul>
-              <h4>品牌故事</h4>
-                <li><a href='#'>品牌介紹</a></li>
+                <h4>品牌故事</h4>
+                <cli><a href='#'>品牌介紹</a></cli>
               </ul>
             </div>
           </div>
-        </div>
+        
           <div className="col-md-3 col-sm-12">
             <div className="footer-item">
               <ul>

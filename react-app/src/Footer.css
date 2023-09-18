@@ -1,12 +1,10 @@
 footer{
     background-color: #9A2540;
     color: white;
+    padding-top: 40px;
 
 }
-.box{
-    display: flex;
-    flex-wrap: nowrap;
-}
+
 .footer-item ul{
     /* margin: 10px 40px; */
     text-align: left;
@@ -19,6 +17,7 @@ footer{
     border-bottom:2px solid #d7879a ;
     text-align: center;
 }
+
 .footer-item li{
     list-style: none;
 }
@@ -29,73 +28,3 @@ footer{
     text-align: center;
 }
 
-/* footer {
-    justify-content: center;
-    background-color: #9A2540;
-    color: white;
-    text-align: center;
-}
-
-.footer-item h4 {
-    border-bottom: 1px solid #df8881;
-    padding-bottom: 20px;
-}
-
-.footer-item nav {
-    padding: 10px 0px;
-  
-    flex-direction: column;
-    line-height: 1.4;
-}
-
-.footer-item nav a {
-    text-decoration: none;
-    color: white;
-    padding: 6px 0;
-
-}
-
-.footer-item nav a:hover {
-    background-color: #5b1e2c;
-
-}
-
-.footer-subs {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.footer-subs form {
-    display: flex;
-    width: 100%;
-    margin: auto 0px;
-    padding: 6px 0;
-}
-
-.footer-subs input[type="text"],
-.footer-subs input[type="submit"] {
-    border: none;
-    padding: 5px 10px;
-}
-
-.footer-subs input[type="text"] {
-    width: 0;
-    flex-grow: 1;
-}
-
-.footer-subs input[type="submit"] {
-    color: #9A2540;
-    background-color: #fcdde2;
-}
-
-.footer-subs input[type="submit"]:hover {
-    background-color: #5b1e2c;
-    color: white;
-}
-
-.conpyright {
-    background-color: #5b1e2c;
-    color: white;
-    text-align: center;
-} */
