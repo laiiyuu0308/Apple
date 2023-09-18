@@ -7,7 +7,7 @@ import Qa from './Pages/qa';
 import Login from './Pages/login';
 import Shop from './Pages/shop';
 import './nav.css'
-import Footer from './Footer';
+
 
 
 
