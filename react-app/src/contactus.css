@@ -1,28 +1,92 @@
+.contactus{
+    background: linear-gradient(to bottom, #ffeaed 0%, #e5c4cd 87.37%);
+
+}
+.contactus h2{
+    margin: 2.5em;
+    text-align: center;
+      
+}
 .contact-items{
-    /* background-color: lightpink;
-    background:linear-gradient 
-    color: white;
-    width: 100%;
+    width: 70%;
     display: flex;
-    justify-content: center; */
-    /* width: 800px;
-    height: 450px;
-    background-color: #fdf0f0;
-    margin: -210px 20px;
-    border-radius: 10%;
-    box-shadow: 10px 20px 20px #fdf0f0;
-    opacity: .6; */
+    border: 2px solid  #e5aab8 ;
+    background-color: #e5aab8;
+    color: white;
+    border-radius: 30px;
+    justify-content: center;
+
+}
+.item{
+    margin: 50px;
+}
+.Address{
+    text-align: center;
+}
+.tour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    /* background-color: #efcfd6; */
+    /* margin:60px */
+    /* justify-content: center; */
+
+}
+
+.sit1{
+    display: flex;
+    margin: 30px;
     
 }
-.contact-items h2{
-    text-align: center;
+.sit1 img{
+    width: 400px;
+    border-radius: 20%;
+    box-shadow: 0px 5px 7px 4px rgba(154, 37, 64, 0.4);
 }
-.contact-items ul{
-   list-style: none;
-   font-size:larger;
-   flex-direction: column;
+.sit1 h4{
+    margin: 90px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size:30px;
+    text-decoration: double;
+    color: rgb(154, 37, 64);
 }
-.item ul li:first-child{
-    text-align: center;
-    font-size: 26px;
+
+.sit2{
+    display: flex;
+    margin:  30px;
+}
+.sit2 img{
+    width: 400px;
+    margin-left: 40px;
+    border-radius: 20%;
+    box-shadow: 8px 5px 7px 4px rgba(154, 37, 64, 0.4);
+}
+.sit2 h4{
+    margin: 90px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size:30px;
+    text-decoration: double;
+    color: rgb(154, 37, 64);
+}
+.sit3{
+    display: flex;
+    margin: 30px;
+    
+}
+.sit3 img{
+    width: 400px;
+    border-radius: 20%;
+    box-shadow: 0px 5px 7px 4px rgba(154, 37, 64, 0.4);
+}
+.sit3 h4{
+    margin: 90px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size:30px;
+    text-decoration: double;
+    color: rgb(154, 37, 64);
+}
+.googlemap{
+    width: 100%;
+    
 }

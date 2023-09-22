@@ -5,7 +5,7 @@ import step1 from './img/step1.png';
 import step2 from './img/step2.png';
 import step3 from './img/step3.png';
 import arrow from './img/箭頭.png';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 function page4() {
   return (
     
